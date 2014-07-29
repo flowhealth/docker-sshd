@@ -9,4 +9,4 @@ RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 RUN mkdir /var/run/sshd 
 RUN ln -s /var/sync/dot-ssh /root/.ssh
 EXPOSE 22
-ENTRYPOINT ["/usr/sbin/sshd", "-D"]
+CMD ["/usr/sbin/sshd", "-D"]
